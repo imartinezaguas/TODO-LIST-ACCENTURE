@@ -1,0 +1,57 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ categoryName | titlecase }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Resumen -->
+  <h2>{{ completedCount }} de {{ tasks.length }} tareas completadas</h2>
+
+  <!-- Buscar tarea -->
+  <ion-searchbar
+    [(ngModel)]="searchTask"
+    placeholder="Buscar tareas..."
+  ></ion-searchbar>
+
+  <!-- Añadir tarea -->
+  <div class="add-task">
+    <ion-input
+      [(ngModel)]="newTask"
+      placeholder="Añadir nueva tarea..."
+    ></ion-input>
+    @if(buttonTaskEnable){
+      <ion-button shape="round" (click)="addTask()">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    }
+  </div>
+
+  <!-- Lista de tareas -->
+  <ion-list>
+    <ion-item-sliding *ngFor="let task of filteredTasks; let i = index">
+
+      <!-- Item -->
+      <ion-item (click)="toggleTask(task)">
+        <ion-icon
+          slot="start"
+          [name]="task.completed ? 'checkmark-circle' : 'ellipse-outline'"
+          [color]="task.completed ? 'success' : 'medium'">
+        </ion-icon>
+        <ion-label [ngClass]="{'done': task.completed}">
+          {{ task.title }}
+        </ion-label>
+      </ion-item>
+
+      <!-- Opciones deslizar -->
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteTask(i)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

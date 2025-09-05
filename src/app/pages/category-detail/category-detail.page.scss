@@ -1,0 +1,19 @@
+.add-task {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+
+  ion-input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 6px 12px;
+  }
+
+}
+
+.done {
+  text-decoration: line-through;
+  color: gray;
+}

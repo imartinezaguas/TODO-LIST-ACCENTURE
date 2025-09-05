@@ -1,0 +1,16 @@
+<ion-card [ngStyle]="{'background-color': color + '10'}" class="category-card">
+  <ion-card-content>
+    <div class="header">
+      <ion-icon [name]="icon" class="icon" [style.color]="color"></ion-icon>
+      <h2>{{ title }}</h2>
+            <ion-button fill="clear" size="small" color="medium" (click)="onEdit($event)">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </div>
+
+    <p>{{ tasks }} tareas</p>
+
+    <ion-progress-bar [value]="progress" [color]="color"></ion-progress-bar>
+    <p>{{ completed }} de {{ tasks }} completadas</p>
+  </ion-card-content>
+</ion-card>
