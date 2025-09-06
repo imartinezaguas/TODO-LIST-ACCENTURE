@@ -256,8 +256,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaLanguageVersion.of(cordovaConfig.JAVA_SOURCE_COMPATIBILITY)
-        targetCompatibility JavaLanguageVersion.of(cordovaConfig.JAVA_TARGET_COMPATIBILITY)
+      sourceCompatibility cordovaConfig.JAVA_SOURCE_COMPATIBILITY
+      targetCompatibility JavaLanguageVersion.of(cordovaConfig.JAVA_TARGET_COMPATIBILITY)
     }
 
     if (cordovaConfig.IS_GRADLE_PLUGIN_KOTLIN_ENABLED) {
