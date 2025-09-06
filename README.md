@@ -147,25 +147,25 @@ npx http-server ./coverage/todo-list-ionic -o
 <img src="screenshots/home.png" width="300"/>
 
 ### Vista de detalle con tareas
-<img src="screenshots/detail.png" width="300"/>
-
-### Barra de progreso completada
-<img src="screenshots/progress.png" width="300"/>
-
-### Remote Config activando/desactivando buscador
-<img src="screenshots/remote-config.png" width="300"/>
+<img src="screenshots/2.png" width="300"/>
 
 ### Crear nueva categoría
-<img src="screenshots/new-category.png" width="300"/>
+<img src="screenshots/3.png" width="300"/>
+
+### Barra de progreso completada
+<img src="screenshots/4.png" width="300"/>
 
 ### Editar categoría
-<img src="screenshots/edit-category.png" width="300"/>
+<img src="screenshots/5.png" width="300"/>
 
 ### Eliminar categoría
-<img src="screenshots/delete-category.png" width="300"/>
+<img src="screenshots/6.png" width="300"/>
 
 ### Eliminar tarea
-<img src="screenshots/delete-task.png" width="300"/>
+<img src="screenshots/7.png" width="300"/>
+
+## Buscar tareas
+<img src="screenshots/8.png" width="300"/>
 
 ---
 
